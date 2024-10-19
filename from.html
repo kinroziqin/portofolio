@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login dan Registrasi</title>
+    <style>
+        body {
+            background-color: #f4f4f4; 
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .form-container {
+            background-color: white; 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            margin: 50px auto; 
+        }
+
+        .form-container h2 {
+            color: #ff7f50; 
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-container label {
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="password"],
+        .form-container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+
+        .form-container input[type="submit"],
+        .form-container input[type="reset"] {
+            width: 48%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff7f50; 
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .form-container input[type="reset"] {
+            background-color: #f44336; 
+        }
+
+        .form-container input[type="submit"]:hover,
+        .form-container input[type="reset"]:hover {
+            opacity: 0.9;
+        }
+
+        .form-container p {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .form-container a {
+            color: #ff7f50; 
+            text-decoration: none;
+        }
+
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form id="loginForm" action="/login" method="POST" onsubmit="return login()">
+            <h2>Login</h2>
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="username" required>
+
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="password" required>
+
+            <div style="display: flex; justify-content: space-between;">
+                <input type="submit" value="Login">
+                <input type="reset" value="Reset">
+            </div>
+            <p>Tidak punya akun? <a href="#" onclick="switchForm('registerForm')">register</a></p>
+        </form>
+
+        <form id="registerForm" action="/register" method="POST" style="display: none;" onsubmit="return register()">
+            <h2>Register</h2>
+            <label for="registerUsername">Username:</label>
+            <input type="text" id="registerUsername" name="username" required>
+
+            <label for="registerEmail">Email:</label>
+            <input type="email" id="registerEmail" name="email" required>
+
+            <label for="registerPassword">Password:</label>
+            <input type="password" id="registerPassword" name="password" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirm_password" required>
+
+            <div style="display: flex; justify-content: space-between;">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+            </div>
+            <p>Sudah punya akun? <a href="#" onclick="switchForm('loginForm')">Login </a></p>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Website Anda</p>
+    </footer>
+
+    <script>
+        function switchForm(formId) {
+            // Mnymbunikan kedua form
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registerForm').style.display = 'none';
+
+            // Menmpilkn form yang dipilih
+            document.getElementById(formId).style.display = 'block';
+        }
+
+        function register() {
+            alert("Pendaftaran berhasil!.");
+            switchForm('loginForm'); 
+            return false; 
+        }
+
+        function login() {
+            window.location.href = "index.html"; 
+            return false; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Membuat Table</title>
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- --------- FAVICON ---------- -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+    <style>
+        body {
+            background-color: 0a31b179;
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2.5em;
+            color: #fff;
+        }
+
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            border: 1px solid #666;
+            background-color: #2c2c54;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid #666;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #1e1e2f;
+        }
+
+        tr:nth-child(even) {
+            background-color: #444;
+        }
+
+        tr:hover {
+            background-color: #575789;
+            transition: background-color 0.3s;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background-color: #1e1e2f;
+        }
+
+        .footer-social-icons .icon {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">kyin</p>
+            <span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+            <ul class="nav_menu_list">
+                <li class="nav_list"><a href="index.html" class="nav-link active-link">Home</a></li>
+                <li class="nav_list"><a href="table.html" class="nav-link">Table</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <h2>Tutorial Membuat HTML Table</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Semester 1</th>
+                <th>Semester 2</th>
+                <th>Semester 3</th>
+                <th>Semester 4</th>
+                <th>Semester 5</th>
+                <th>Semester 6</th>
+                <th>Semester 7</th>
+                <th>Semester 8</th>
+                <th>Jurusan</th>
+                <th>Fakultas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12345678</td>
+                <td>Ahmad Roziqin</td>
+                <td>3.5</td>
+                <td>3.6</td>
+                <td>3.7</td>
+                <td>3.8</td>
+                <td>3.9</td>
+                <td>3.8</td>
+                <td>4.0</td>
+                <td>3.9</td>
+                <td>Teknik Informatika</td>
+                <td>Fakultas Teknik</td>
+            </tr>
+            <tr>
+                <td>87654321</td>
+                <td>Adit Yaaa</td>
+                <td>3.4</td>
+                <td>3.5</td>
+                <td>3.6</td>
+                <td>3.7</td>
+                <td>3.8</td>
+                <td>3.9</td>
+                <td>3.8</td>
+                <td>4.0</td>
+                <td>Sistem Informasi</td>
+                <td>Fakultas Teknik</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="index.html" class="back-link">Kembali</a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-social-icons">
+            <div class="icon">
+                <a href="https://www.instagram.com/jikinn12/" target="_blank"><i class="uil uil-instagram"></i></a>
+            </div>
+            <div class="icon">
+                <a href="https://www.linkedin.com" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
+            </div>
+            <div class="icon">
+                <a href="https://www.github.com" target="_blank"><i class="uil uil-github-alt"></i></a>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <p>Copyright &copy; kyin - All rights reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -20,12 +20,7 @@
   --third-color: #d4af37; /* Emas mewah dan tegas untuk elemen penting dan aksen premium */
 
   /* Shadow and Hover Effects */
-  --first-shadow-color: rgba(
-    255,
-    195,
-    195,
-    0.993
-  ); /* Shadow putih lembut untuk menambah kedalaman */
+  --first-shadow-color: rgba(133, 67, 67, 0.993); /* Shadow putih lembut untuk menambah kedalaman */
   --second-shadow-color: rgba(
     0,
     0,

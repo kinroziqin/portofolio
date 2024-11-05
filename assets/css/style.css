@@ -16,7 +16,7 @@
   --first-color-hover: #554e72; /* Ungu lebih tua untuk efek hover, memperkuat kesan tegas pada interaksi */
 
   /* Accent Colors */
-  --second-color: #618e94; /* Biru kehijauan tegas untuk elemen sekunder, menghadirkan kesan segar namun tetap formal */
+  --second-color: #010202; /* Biru kehijauan tegas untuk elemen sekunder, menghadirkan kesan segar namun tetap formal */
   --third-color: #221d0d; /* Emas mewah dan tegas untuk elemen penting dan aksen premium */
 
   /* Shadow and Hover Effects */
@@ -36,7 +36,7 @@
 .tutorial-box {
   background-color: #d9d9d9; /* Light gray background for the tutorial box */
   border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  box-shadow: 0 2px 5px rgba(117, 46, 46, 0.2); /* Subtle shadow */
   margin: 20px 0; /* Margin between tutorial boxes */
   padding: 15px; /* Padding inside the tutorial box */
 }
@@ -499,7 +499,7 @@ h3 {
 }
 .project-box > i {
   font-size: 50px;
-  color: #00b5e7;
+  color: #050607;
   margin-bottom: 25px;
 }
 .project-box label {
@@ -755,4 +755,40 @@ footer {
   .input-field {
     width: 100%;
   }
+}
+/* Menu and Submenu Styling */
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-item {
+  position: relative;
+}
+
+.submenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none; /* Sembunyikan submenu secara default */
+  position: absolute; /* Agar submenu muncul di bawah menu utama */
+  top: 100%; /* Menempatkan submenu di bawah item menu */
+  left: 0;
+  background-color: #e2d9d9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.submenu li {
+  margin: 0;
+}
+
+.submenu a {
+  display: block;
+  padding: 8px 12px;
+  color: #333;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  background-color: #f0f0f0;
 }

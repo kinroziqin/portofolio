@@ -113,5 +113,34 @@ sections.forEach(current =>{
   }
 })
 }
+// Script to toggle submenu visibility on click
+document.addEventListener('DOMContentLoaded', function () {
+  const menuItems = document.querySelectorAll('.menu-item > a');
+
+  menuItems.forEach((menuItem) => {
+    menuItem.addEventListener('click', function (e) {
+      e.preventDefault();
+      const submenu = this.nextElementSibling;
+
+      // Tutup semua submenu lain yang terbuka
+      document.querySelectorAll('.submenu').forEach((sm) => {
+        if (sm !== submenu) sm.style.display = 'none';
+      });
+
+      // Toggle submenu visibility
+      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+
+  // Menutup submenu saat klik di luar menu
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.menu-item')) {
+      document.querySelectorAll('.submenu').forEach((submenu) => {
+        submenu.style.display = 'none';
+      });
+    }
+  });
+});
+
 
 window.addEventListener('scroll', scrollActive)
